@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+    <title>Bulma</title>
+</head>
+
+<body>
+  <div style="background-image: url('/images/bgr.jpg'); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover;">
+    <header>
+      <nav class="navbar is-light">
+        <div class="container">
+          <div class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="bootstrap.html">Bootstrap</a>
+              <a class="navbar-item" href="bulma.html">Bulma</a>
+              <a class="navbar-item" href="#">Link 3</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <div class="is-flex is-justify-content-center mb-5">
+        <button class="button is-primary is-large" data-target="#demo" aria-expanded="false" onclick="toggleCollapse('demo')">Bulma</button>
+      </div>
+
+      <div id="demo" class="box" style="display: none;">
+        <div class="columns is-vcentered">
+          <div class="column is-4">
+            <h2 class="title">Bulma</h2>
+            <p>
+              Jag valde Bulma för att det är enkelt att använda och spara tid. Det har många färdiga komponenter och klasser som gör det lätt att skapa en snygg och responsiv webbdesign utan att behöva skriva mycket egen CSS. Dessutom är det väldigt populärt, och eftersom många använder det kan det vara bra att kunna för framtiden.
+            </p>
+          </div>
+          <div class="column is-8">
+            <div class="table-container">
+              <table id="frameworkTable" class="table is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Egenskap</th>
+                    <th>Popularitet</th>
+                    <th>Användningssätt</th>
+                    <th>Flexibilitet</th>
+                    <th>Inlärningskurva</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Bootstrap</td>
+                    <td>Hög, mycket utbrett</td>
+                    <td>Komponentbaserat</td>
+                    <td>Begränsad utan anpassning</td>
+                    <td>Lätt, enkel att lära</td>
+                  </tr>
+                  <tr>
+                    <td>Tailwind CSS</td>
+                    <td>Växande snabbt</td>
+                    <td>Utility-first, klassbaserat</td>
+                    <td>Mycket flexibel</td>
+                    <td>Måttlig, kräver förståelse för utility-klasser</td>
+                  </tr>
+                  <tr>
+                    <td>Foundation</td>
+                    <td>Mindre utbrett</td>
+                    <td>Komponentbaserat</td>
+                    <td>Mycket flexibel</td>
+                    <td>Måttlig</td>
+                  </tr>
+                  <tr>
+                    <td>Bulma</td>
+                    <td>Medel, populär bland vissa utvecklare</td>
+                    <td>Komponentbaserat</td>
+                    <td>Flexibel men begränsad till Flexbox</td>
+                    <td>Lätt</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <h4 class="title is-4">Lägg till nytt ramverk</h4>
+          <form id="addFrameworkForm">
+            <div class="field">
+              <label for="frameworkName" class="label">Ramverk</label>
+              <div class="control">
+                <input type="text" id="frameworkName" class="input" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="popularity" class="label">Popularitet</label>
+              <div class="control">
+                <input type="text" id="popularity" class="input" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="usage" class="label">Användningssätt</label>
+              <div class="control">
+                <input type="text" id="usage" class="input" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="flexibility" class="label">Flexibilitet</label>
+              <div class="control">
+                <input type="text" id="flexibility" class="input" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="learningCurve" class="label">Inlärningskurva</label>
+              <div class="control">
+                <input type="text" id="learningCurve" class="input" required>
+              </div>
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-primary">Lägg till</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleCollapse(id) {
+      const element = document.getElementById(id);
+      element.style.display = element.style.display === 'none' ? 'block' : 'none';
+    }
+
+    document.getElementById('addFrameworkForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Hämta värden från formulärfälten
+      const frameworkName = document.getElementById('frameworkName').value;
+      const popularity = document.getElementById('popularity').value;
+      const usage = document.getElementById('usage').value;
+      const flexibility = document.getElementById('flexibility').value;
+      const learningCurve = document.getElementById('learningCurve').value;
+
+      // Skapa en ny rad
+      const table = document.getElementById('frameworkTable').getElementsByTagName('tbody')[0];
+      const newRow = table.insertRow();
+
+      // Lägg till celler i den nya raden
+      newRow.innerHTML = `
+        <td>${frameworkName}</td>
+        <td>${popularity}</td>
+        <td>${usage}</td>
+        <td>${flexibility}</td>
+        <td>${learningCurve}</td>
+      `;
+
+      // Rensa formuläret efter att en rad lagts till
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>

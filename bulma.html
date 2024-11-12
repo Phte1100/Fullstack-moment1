@@ -3,39 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Länka till Bulma CSS för att använda Bulma-klasser -->
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
     <title>Bulma</title>
 </head>
 
 <body>
+  <!-- fullskärmsbakgrundsbild -->
   <div style="background-image: url('images/bgr.jpg'); width: 100%; height: 100vh; background-repeat: no-repeat; background-size: cover;">
     <header>
+      <!-- Light-färgad navbar med Bulma-klasser -->
       <nav class="navbar is-light">
         <div class="container">
           <div class="navbar-menu">
             <div class="navbar-start">
+              <!-- Navigeringslänkar med Bulma-klass -->
+              <a class="navbar-item" href="index.html">Hem</a>
               <a class="navbar-item" href="bootstrap.html">Bootstrap</a>
               <a class="navbar-item" href="bulma.html">Bulma</a>
-              <a class="navbar-item" href="#">Link 3</a>
+              <a class="navbar-item" href="github.html">Github-pages</a>
             </div>
           </div>
         </div>
       </nav>
     </header>
 
+    <!-- Container för innehåll med vertikal marginal för avstånd -->
     <div class="container mt-5">
       <div class="is-flex is-justify-content-center mb-5">
+        <!-- Primär knapp med storlek "is-large" och färg "is-primary" -->
         <button class="button is-primary is-large" data-target="#demo" aria-expanded="false" onclick="toggleCollapse('demo')">Bulma</button>
       </div>
 
+      <!-- Kollapsbar sektion som visas när knappen klickas -->
       <div id="demo" class="box" style="display: none;">
         <div class="columns is-vcentered">
+          <!-- Kolumn layout från Bulma; "is-4" anger bredden som 4/12 av raden -->
           <div class="column is-4">
             <h2 class="title">Bulma</h2>
             <p>
               Jag väljer Bulma för att det är lätt att komma igång med och ger mig snabbt ett professionellt resultat. Med Bulma behöver jag inte skriva mycket egen kod eftersom det redan har många färdiga komponenter för layout och design. Det gör det smidigt att bygga responsiva sidor som ser bra ut på alla skärmar. Jag gillar också att Bulma är flexibelt och passar till olika typer av projekt, så jag kan använda det oavsett vad jag bygger.
             </p>
+            <strong><a class="nav-link" href="https://bulma.io/">Mer om Bulma</a></strong>
           </div>
+
           <div class="column is-8">
             <div class="table-container">
               <table id="frameworkTable" class="table is-striped is-fullwidth">
@@ -83,6 +94,7 @@
           </div>
         </div>
 
+        <!-- Formulär för att lägga till nytt ramverk -->
         <div class="mt-5">
           <h4 class="title is-4">Lägg till nytt ramverk</h4>
           <form id="addFrameworkForm">
@@ -117,6 +129,7 @@
               </div>
             </div>
             <div class="control">
+              <!-- Primär knapp för att lägga till data med Bulma-stil -->
               <button type="submit" class="button is-primary">Lägg till</button>
             </div>
           </form>
@@ -126,6 +139,7 @@
   </div>
 
   <script>
+    // Funktion för att visa eller dölja kollapsbar sektion
     function toggleCollapse(id) {
       const element = document.getElementById(id);
       element.style.display = element.style.display === 'none' ? 'block' : 'none';

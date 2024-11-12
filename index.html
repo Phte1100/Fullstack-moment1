@@ -11,7 +11,7 @@
     <header>
 
 
-    <div class="container-fluid p-5 bg-primary text-white text-center">
+    <div class="container-fluid p-5 bg-dark text-white text-center">
         <h1>Moment 1</h1>
         <br>
         <p>I denna uppgift ska jag testa två olika CSS-ramverk och göra en jämförelse för att se fördelar/nackdelar samt vilken jag föredrar.
@@ -20,37 +20,46 @@
       </div>
       <ul class="nav justify-content-center">
         <li class="nav-item">
+          <a class="nav-link" href="index.html">Hem</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="bootstrap.html">Bootstrap</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="bulma.html">Bulma</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="github.html">Github-pages</a>
         </li>
       </ul>
     </header>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <h3>Bootstrap</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Materilize</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>GITHUB publicering</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-          </div>
-        </div>
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Bootstrap Section -->
+        <a href="https://getbootstrap.com/" class="col-sm-4 text-decoration-none text-dark">
+          <h3>Bootstrap</h3>
+          <p>Bootstrap gör det enkelt att skapa snygga och responsiva webbplatser snabbt med färdiga komponenter och layoutalternativ.</p>
+        </a>
+    
+        <!-- Bulma Section -->
+        <a href="https://bulma.io/" class="col-sm-4 text-decoration-none text-dark">
+          <h3>Bulma</h3>
+          <p>Bulma är ett lättanvänt CSS-ramverk med fokus på enkelhet och modern design, perfekt för att bygga responsiva sidor snabbt.</p>
+        </a>
+    
+        <!-- GitHub Pages Section -->
+        <a href="https://pages.github.com/" class="col-sm-4 text-decoration-none text-dark">
+          <h3>GitHub Pages</h3>
+          <p>Med GitHub Pages kan jag publicera mina projekt direkt från GitHub, vilket är perfekt för denna uppgift.</p>
+        </a>
       </div>
+    </div>
+    
+      </div>
+      <footer class="bootstrap-classes bg-secondary text-white text-center" style="position: fixed; bottom: 0; width: 100%;">
+        <div class="container">
+              <strong><p>Moment 1, Phte1100</p></strong>
+       </div>
+   </footer>
 </body>
 </html>
